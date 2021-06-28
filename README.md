@@ -1,0 +1,1 @@
+# contentful-nuxt-shopify-demo
