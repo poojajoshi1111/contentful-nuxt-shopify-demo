@@ -1,0 +1,76 @@
+# Write your query or mutation here
+query Products {
+  products(first: 10) {
+    edges {
+      node {
+        id
+        title
+        handle
+        images(first: 10) {
+          edges {
+            node {
+              id
+              width
+              height
+              altText
+              src: originalSrc
+              w_300_h_300: transformedSrc(
+                maxWidth: 300
+                maxHeight: 300
+                crop: TOP
+              )
+            }
+          }
+        }
+        priceRange {
+          maxVariantPrice {
+            amount
+            currencyCode
+          }
+          minVariantPrice {
+            amount
+            currencyCode
+          }
+        }
+        availableForSale
+      }
+    }
+  }
+}
+
+query ProductByHandle($handle: String!) {
+  productByHandle(handle: $handle) {
+    id
+    title
+    handle
+    vendor
+    descriptionHtml
+    images(first: 10) {
+      edges {
+        node {
+          id
+          width
+          height
+          altText
+          src: originalSrc
+          w_1024_h_767: transformedSrc(
+            maxWidth: 1024
+            maxHeight: 767
+            crop: TOP
+          )
+        }
+      }
+    }
+    priceRange {
+      maxVariantPrice {
+        amount
+        currencyCode
+      }
+      minVariantPrice {
+        amount
+        currencyCode
+      }
+    }
+    availableForSale
+  }
+}

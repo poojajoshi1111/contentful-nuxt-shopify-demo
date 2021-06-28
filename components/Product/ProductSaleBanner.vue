@@ -1,0 +1,17 @@
+<template>
+  <div
+    class="
+      w-full
+      text-center
+      bg-red-600
+      p-2
+      text-2xs
+      font-medium
+      leading-normal
+      text-white
+      uppercase
+    "
+  >
+    Sale
+  </div>
+</template>

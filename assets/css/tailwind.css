@@ -1,0 +1,18 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  letter-spacing: 0.0125em;
+}
+
+.five-line-clamp {
+  @apply overflow-hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.nuxt-link-exact-active {
+  color: white;
+}
